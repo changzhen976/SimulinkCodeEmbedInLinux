@@ -9,6 +9,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # 包含目录
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/generated  # Simulink生成的头文件
+    ${CMAKE_CURRENT_SOURCE_DIR}/generated/demo  # Simulink生成的头文件
 )
 
 # 收集所有源文件
