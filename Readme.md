@@ -3,6 +3,7 @@
 ----
 
 > Matlab 2021b
+>
 > Ubantu 20.04 (wsl)
 
 ## Simulink Setting
@@ -53,5 +54,6 @@ Input cmd `:Tags` in nvim
 ### Generate `compile_commands.json`
 
 `cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..` or add `set(CMAKE_EXPORT_COMPILE_COMMANDS ON)` in CMakeLists.txt
+
 `cp compile_commands.json ..`
 
