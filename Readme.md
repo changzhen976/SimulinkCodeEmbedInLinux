@@ -13,6 +13,7 @@
 
 ## Project Structure
 
+```
 .
 ├── CMakeLists.txt
 ├── Readme.md
@@ -28,6 +29,7 @@
 ├── src
 │   └── test.c
 └── tags
+```
 
 Folder:
     - `./src`: main function folder
