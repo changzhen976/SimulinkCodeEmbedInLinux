@@ -13,7 +13,7 @@ static RT_MODEL_CodeGenerateTest_T CodeGenerateTest_M_;
 static RT_MODEL_CodeGenerateTest_T *const CodeGenerateTest_MPtr =
     &CodeGenerateTest_M_;
 
-void SimuOneStep(RT_MODEL_CodeGenerateTest_T *const CodeGenerateTest_M) {
+void DemoOneStep(RT_MODEL_CodeGenerateTest_T *const CodeGenerateTest_M) {
     static boolean_T OverrunFlag = false;
 
     if (OverrunFlag) {
@@ -41,7 +41,7 @@ int main() {
     b = 12.3;
     printf("set b equl %f\n", b);
 
-    SimuOneStep(CodeGenerateTest_M);
+    DemoOneStep(CodeGenerateTest_M);
     printf("add a and b\n");
 
     printf("resutl c : %f\n", c);
