@@ -4,7 +4,7 @@
 
 > Matlab 2021b
 >
-> Ubantu 20.04 (wsl)
+> Ubuntu 20.04 (wsl)
 
 ## Simulink Setting
 
