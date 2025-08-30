@@ -13,6 +13,17 @@ static RT_MODEL_CodeGenerateTest_T CodeGenerateTest_M_;
 static RT_MODEL_CodeGenerateTest_T *const CodeGenerateTest_MPtr =
     &CodeGenerateTest_M_;
 
+// init Simulink Code
+void DemoInit(RT_MODEL_CodeGenerateTest_T *const CodeGenerateTest_M,
+              real_T *CodeGenerateTest_U_a, real_T *CodeGenerateTest_U_b,
+              real_T *CodeGenerateTest_Y_result) {
+    // initialize
+    CodeGenerateTest_initialize(CodeGenerateTest_M, CodeGenerateTest_U_a,
+                                CodeGenerateTest_U_b,
+                                CodeGenerateTest_Y_result);
+}
+
+// Call Simulink Code step function
 void DemoOneStep(RT_MODEL_CodeGenerateTest_T *const CodeGenerateTest_M) {
     static boolean_T OverrunFlag = false;
 
@@ -33,9 +44,9 @@ int main() {
     RT_MODEL_CodeGenerateTest_T *const CodeGenerateTest_M =
         CodeGenerateTest_MPtr;
 
-    // initialize a b c
-    CodeGenerateTest_initialize(CodeGenerateTest_M, &a, &b, &c);
-
+    DemoInit(CodeGenerateTest_M, &a, &b, &c);
+ 
+    // set variables
     a = 23.33;
     printf("set a equl %f\n", a);
     b = 12.3;
